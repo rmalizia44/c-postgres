@@ -1,0 +1,1 @@
+Minimum example of using PostgreSQL in C
