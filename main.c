@@ -35,7 +35,7 @@ int main(int argc, const char* argv[]) {
         goto quit_stmt;
     }
     if(PQresultStatus(res) != PGRES_TUPLES_OK) {
-        LOG("can't exec query");
+        LOG("can't exec query: %s", PQerrorMessage(pg));
         goto quit_res;
     }
     LOG("inserted: %s", PQgetvalue(res, 0, 0));
